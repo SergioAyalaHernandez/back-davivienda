@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "rootDir": "./",
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "@application/*": [
+        "application/src/*"
+      ],
+      "@domain/*": [
+        "domain/*"
+      ],
+      "@models/*": [
+        "domain/models/*"
+      ],
+      "@usecase/*": [
+        "domain/usecase/*"
+      ],
+      "@infrastructure/*": [
+        "infrastructure/*"
+      ],
+      "@controllers/*": [
+        "infrastructure/entry-points/entry-web/controllers/*"
+      ],
+      "@routes/*": [
+        "infrastructure/entry-points/entry-web/routes/*"
+      ],
+      "@repositories/*": [
+        "infrastructure/driven-adapters/db-mongo/repository/*"
+      ],
+      "@db/*": [
+        "infrastructure/driven-adapters/db-mongo/*"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./application/src/types"
+    ]
+  },
+  "include": [
+    "application/src/**/*.ts",
+    "application/src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
